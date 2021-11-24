@@ -2,9 +2,8 @@
 Portfólio e contribuições individuais de cada projeto.
 
 
-1. 1º Semestre
+## 1º Semestre - Projeto webbot - Hey Series
 
-Hey Series
 Trabalho realizado pelos alunos da FATEC/SJC do 1º Semestre/2019. Consiste na criação de um webbot, coletando dados de diversas plataformas cinematográficas e otimizar a experiência do usuário em indicação de séries.
 
 Construção
@@ -29,17 +28,125 @@ Abrir a pasta 'projeto-webbot'
 Abrir o diretório: CÓDIGO/Front End/ProjetoPI - HTML
 Instalar as dependências através do pip3: pip3 install bs4, pip3 install requests, pip3 install flask
 
-2. 2º Semestre -
+## Contribuições individuias
 
-## Projeto Integrador realizado pelos alunos do 2º (segundo) semestre de Banco de Dados da FATEC/SJC no ano de 2020.
+Desenvolvimento front-end: primeiro contato com html, css e  javascript.
+
+```
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+  <title>Hey Series</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="../static/img/favicon-96x96.png">
+  <link href="https://fonts.googleapis.com/css?family=Neuton:800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/index.js"></script>
+</head>
+
+<body>
+  <header class="menu-principal">
+
+    <div class="redes-sociais">
+      <a href="https://gitlab.com/Jeferson.Constantino/projeto-webbot" target="_blank">
+        <img src="../static/img/Git-Logo-White.png" />
+      </a>
+      <div class="dropdown">
+        <p>ABOUT</p>
+        <div class="dropdown-content">
+          <p> Trabalho realizado pelos alunos da FATEC/SJC do 1º Semestre/2019.
+            Consiste na criação de um webbot, coletando dados de diversas plataformas
+            cinematográficas e otimizar a experiência do usuário em indicação de séries.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <div class="logo">
+    <img src="../static/img/logo.png">
+  </div>
+
+
+  <div class="search">
+    <input placeholder="Search Something" type="search" id="text" list="historico" />
+    <i id="btnSearch" class="material-icons">
+      search
+    </i>
+    <datalist id="historico">
+
+    </datalist>
+  </div>
+
+  <div class="options">
+    <div class="field">
+      <input type="radio" id="rdbGenre" name="search" value="genre">Genre</input>&nbsp;
+    </div>
+
+    <div class="field">
+      <input type="radio" id="rdbTitle" name="search" value="title">Title</input>&nbsp;
+    </div>
+
+    <div class="field">
+      <input type="radio" id="rdbYear" name="search" value="year">Year</input>
+    </div>
+  </div>
+
+
+  </div>
+
+  <div class="results-space">
+
+    <div class="results">
+      <table id="tableSeries">
+        <thead>
+          <tr>
+            <th>
+              Title
+            </th>
+            <th>
+              Note
+            </th>
+            <th>
+              Genre
+            </th>
+            <th>
+              Year
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for serie in data %}
+          <tr>
+            <td>{{serie.title}}</td>
+            <td>{{serie.notes}}</td>
+            <td>{{serie.genre}}</td>
+            <td>{{serie.year}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</body>
+
+
+
+</html>
+```
+ 
+## 2º Semestre - Loading
+
 
 Consiste na criação de uma aplicação web utilizando o diagrama de Gantt para análise e controle de projetos.
-
-1. Disciplinas relacionadas:
-- Arquitetura e Modelagem de Banco de dados - Prof Emanuel Mineda
-- Engenharia de Software - Prof Giuliano Araujo Bertoti
-- Linguagem de Programação I - Prof Adriana da Silva Jacinto
-- Laboratório em Desenvolvimento em Banco de Dados II - Prof Adriana da Silva Jacinto
 
 ## Problema
 
@@ -53,45 +160,340 @@ O cliente busca otimizar a organização dos projetos, desenhando uma visão est
 - biblioteca: dhtmlx
 - banco de dados: MySQL
 
-## Levantamento de requisitos:
-Criação de uma tabela dinâmica (projetos) com livre movimentação de tarefas, que será designada para cada projeto, e designar desenvolvedores para elas.
+## Contribuiçoes individuais
 
-##### Requisitos Funcionais
+Nesse projeto, foi possível entender como trabalhar com uma nova ferramenta (dhtmlx) e configurando o front end.
 
-| Requisitos funcionais             |  Código |              Descrição                                                                                                                                     |Prioridade|
-| ----------------------------------|---------| -----------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-|Cadastrar projetos                 |RF01     |Pessoas responsáveis para o registro no sistema serão capacitados para cadastrar os projetos, informando: data, cliente, descrição, tarefa e desenvolvedores|    1     |
-|Cadastrar tarefas                  |RF02     |Cadastrar tarefas em projetos existentes (Informar: tempo de desenvolvimento, desenvolvedor e descrição)                                                    |    2     |
-|Cadastrar desenvolvedores          |RF03     |Cadastrar desenvolvedores em tarefas existentes (Informar: nome, carga horária de trabalho e disponibilidade)                                               |    3     |   
-|Excluir dados                      |RF04     |O usuário poderá excluir dados envolvendo os projetos, tarefas e desenvolvedores designados                                                                 |    4     |       
-|Alterar dados                      |RF05     |O usuário poderá alterar dados envolvendo os projetos, tarefas e desenvolvedores designados                                                                 |    5     |
-|Filtrar dados                      |RF06     |O sistema poderá filtrar os dados: projetos, tarefas e desenvolvedores                                                                                      |    6     |
-|Gerar relatórios                   |RF07     |O usuário poderá imprimir relatórios: projetos, tarefas e desenvolvedores                                                                                   |    7     |                                              
+```
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+	<div class="card" id="telaCadastro" style="text-align: center">
+		<div class="card-body" >
+                <div class="name-body">
+				<label>Nome Completo</label>
+				<input type="text" class="form-control" id="name_user" placeholder="Nome Completo">
+                </div>
+                <div class="email-body">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email_user" aria-describedby="emailHelp" placeholder="Digite o email">
+                </div>
+                <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" id="senha_user" placeholder="Digite a senha">
+                </div>
+                <button type="submit" class="btn btn-outline-secondary"  id="cadastro" onclick="cadastrar()">Cadastrar</button>
+                <button type="submit" class="btn btn-outline-secondary"  id="sair" onclick="sair()">Sair</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function sair(){
+			window.location.href= "login.html";
+		}
+	</script>
+</body>
+</html>
+```
+
+```
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>DARWING!</title>
+
+	<script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+	<link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="static/css/main.css">
+	<style type="text/css">
+		html, body{
+			height:100%;
+			padding:0px;
+			margin:0px;
+			overflow: hidden;
+		}
+		.gantt_task_line.gantt_project{
+				color:white;
+			}
+
+			.gantt_side_content{
+				color:#333;
+			}
+
+			.summary-bar{
+				font-weight: bold;
+			}
+
+			.gantt_resource_task .gantt_task_content{
+				color:inherit;
+			}
+
+			.gantt_resource_task .gantt_task_progress{
+				background-color:rgba(33,33,33,0.3);
+			}
+
+			.gantt_cell:nth-child(1) .gantt_tree_content{
+				border-radius: 16px;
+				width: 100%;
+				height: 80%;
+				margin: 5% 0;
+				line-height: 230%;
+			}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div id="container">
+		  <h5 style="text-align:center;background-color:#4b4276;color: #fff;padding: 5px 5px">DARWING</h5>
+		  <nav>
+		  <ul>
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale1" class="gantt_radio" name="scale" value="hour"><label for="scale1">Hour scale</label></a></li>
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="day"><label for="scale3">Day scale</label></a></li>
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale2" class="gantt_radio" name="scale" value="week"><label for="scale2">Week scale</label></a></li>	
+			<li style="text-align:center;background-color:#4b4276;color: #fff"><a><input type="radio" id="scale3" class="gantt_radio" name="scale" value="month"><label for="scale3">Month scale</label></a></li>
+		  </ul>
+		  </nav>
+		</div>
+	</header>
+
+<div id="gantt_here" style='width:100%; height:100%;'></div>
+<script type="text/javascript">
+
+gantt.config.duration_unit = "hour";
+var zoomConfig = {
+		levels: [
+			{
+				name:"hour",
+				scale_height: 27,
+				min_column_width:80,
+				scales:[
+				{unit: "hour", step: 1, format: "%H:%i"}
+				]
+			},
+			{
+				name:"day",
+				scale_height: 27,
+				min_column_width:80,
+				scales:[
+					{unit: "day", step: 1, format: "%d %M"}
+				]
+			},
+			{
+				name:"week",
+				scale_height: 50,
+				min_column_width:50,
+				scales:[
+					{unit: "week", step: 1, format: function (date) {
+						var dateToStr = gantt.date.date_to_str("%d %M");
+						var endDate = gantt.date.add(date, -6, "day");
+						var weekNum = gantt.date.date_to_str("%W")(date);
+						return "#" + weekNum + ", " + dateToStr(date) + " - " + dateToStr(endDate);
+					}},
+					{unit: "day", step: 1, format: "%j %D"}
+				]
+			},
+			{
+				name:"month",
+				scale_height: 50,
+				min_column_width:120,
+				scales:[
+					{unit: "month", format: "%F, %Y"},
+					{unit: "week", format: "Week #%W"}
+				]
+			}
+		]
+	};
+
+	gantt.ext.zoom.init(zoomConfig);
+	gantt.ext.zoom.setLevel("day");
+	gantt.ext.zoom.attachEvent("onAfterZoom", function(level, config){
+		document.querySelector(".gantt_radio[value='" +config.name+ "']").checked = true;
+	})
+
+	function zoomIn(){
+		gantt.ext.zoom.zoomIn();
+	}
+	function zoomOut(){
+		gantt.ext.zoom.zoomOut()
+	}
+
+	var radios = document.getElementsByName("scale");
+	for (var i = 0; i < radios.length; i++) {
+		radios[i].onclick = function (event) {
+			gantt.ext.zoom.setLevel(event.target.value);
+		};
+	}
+	var dev =  [
+		{key: 1, label: "Vitor", backgroundColor:"#03A9F4", textColor:"#FFF"},
+		{key: 2, label: "Fernanda", backgroundColor:"#f57730", textColor:"#FFF"},
+		{key: 3, label: "Gabriela", backgroundColor:"#e157de", textColor:"#FFF"},
+		{key: 4, label: "Cadu", backgroundColor:"#78909C", textColor:"#FFF"},
+		{key: 7, label: "Adriana", backgroundColor:"#8D6E63", textColor:"#FFF"},
+		{key: 8, label: "  ", backgroundColor:"#000", textColor:"#FFF"}
+	]
+		//lista de DEVS'
+	gantt.serverList("staff", dev);
+		//CONFIG DA BARRA LATERAL
+	gantt.config.grid_width = 420;
+	gantt.config.grid_resize = true;
+	gantt.config.open_tree_initially = true;
+
+	var labels = gantt.locale.labels;
+	labels.column_owner = labels.section_owner = "Owner";
+
+	function byId(list, id) {
+		for (var i = 0; i < list.length; i++) {
+			if (list[i].key == id)
+				return list[i].label || "";
+		}
+		return "";
+	}
+
+			//CONFIGURAÇÃO DA COLUNAS DE INFO
+	gantt.config.columns = [
+		{name: "owner", width: 80, align: "center", template: function (item) {
+				return byId(gantt.serverList('staff'), item.owner_id)}},
+		{name: "text", label: "Task name", tree: true, width: '*'},
+    	{name: "start_date", align: "center", width: 80, resize: true},
+    	{name: "duration", width: 60, align: "center"},
+		{name: "add", width: 40}
+	];
+			//MODAL DA ADIÇÃO DE TAREFAS
+	gantt.config.lightbox.sections = [
+		{name: "description", height: 38, map_to: "text", type: "textarea", focus: true},
+		{name: "owner", height: 22, map_to: "owner_id", type: "select", options: gantt.serverList("staff")},
+		{name: "time", type: "duration", map_to: "auto"}
+	];
+
+	gantt.templates.grid_row_class =
+		gantt.templates.task_row_class =
+			gantt.templates.task_class = function (start, end, task) {
+		var css = [];
+		if (task.$virtual || task.type == gantt.config.types.project)
+			css.push("summary-bar");
+
+		if(task.owner_id){
+			css.push("gantt_resource_task gantt_resource_" + task.owner_id);
+		}
+
+		return css.join(" ");
+	};
+
+	gantt.attachEvent("onParse", function(){
+		var styleId = "dynamicGanttStyles";
+		var element = document.getElementById(styleId);
+		if(!element){
+			element = document.createElement("style");
+			element.id = styleId;
+			document.querySelector("head").appendChild(element);
+		}
+		var html = [];
+		var resources = gantt.serverList("staff");
+
+		resources.forEach(function(r){
+			html.push(".gantt_task_line.gantt_resource_" + r.key + "{" +
+				"background-color:"+r.backgroundColor+"; " +
+				"color:"+r.textColor+";" +
+			"}");
+			html.push(".gantt_row.gantt_resource_" + r.key + " .gantt_cell:nth-child(1) .gantt_tree_content{" +
+				"background-color:"+r.backgroundColor+"; " +
+				"color:"+r.textColor+";" +
+				"}");
+		});
+		element.innerHTML = html.join("");
+	});
+
+	gantt.config.xml_date = "%Y-%m-%d %H:%i:%s";
+
+	gantt.config.order_branch = true;/*!*/
+	gantt.config.order_branch_free = true;/*!*/
+
+	gantt.init("gantt_here");
+
+	gantt.load("/data");
+
+	var dp = new gantt.dataProcessor("/data");
+	dp.init(gantt);
+	dp.setTransactionMode("REST");
+</script>
+</body>
+
+```
+
+```
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/login.css">
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="card" id="telaLogin" style="text-align: center">
+		<div class="card-body" >
+            <div class="cardy-body">
+              <label>Usuário</label>
+              <input type="email" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Digite o email">
+            </div>
+            <div class="form-group">
+              <label>Senha</label>
+              <input type="password" class="form-control" id="senha" placeholder="Digite a senha">
+            </div>
+            <div class="buttons">
+            <button class="btn btn-outline-secondary" id="login" onclick="validar()">Entrar</button>
+            <button class="btn btn-outline-secondary" id="cadastro" onclick="cadastro()">Cadastrar</button>
+            </div>
+        </div>
+      </div>
+ </body>
+<script type="text/javascript" src="js/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript">
+	function validar(){
+		if ($("#usuario").val()!= "admin@darwing" || $("#senha").val()!= "darwing") {
+			return alert("Usuário ou Senha Inválidos");
+		}
+		window.location.href="index.html";
+
+	}
+	$("#usuario, #senha").keypress(function(event){
+		if (event.keyCode == 13) {
+			validar()
+		}
+	})
+</script>
+<script type="text/javascript">
+	function cadastro(){
+		window.location.href="cadastro.html"
+	}
+</script>
+</html>
+
+```
 
 
-##### Requisitos não funcionais
-
-
-| Requisitos não funcionais         |  Código |              Descrição                                                                                                           |
-| ----------------------------------|---------| ---------------------------------------------------------------------------------------------------------------------------------|
-|Usabilidade                        |RNF01    |Estética e Design minimalista: A interface do usuário deve ser implementada de maneira simples (interface web)                    |
-|Visibilidade do status do sistema  |RNF02    |As tarefas e projetos serão organizados em cores: verde (em andamento), amarelo (chegando perto da entrega) e vermelho (entregue) |
-|Consistência e padrões             |RNF03    |Consistência e padrões: Os dados serão visualizados em tabelas (diagrama de gantt)                                                |                                                                               |             
-|Portabilidade                      |RNF04    |A consulta ao acervo deve estar disponivel na internet (principais navegadores disponíveis)                                       |
-|Acesso de segurança                |RNF05    |O sistema deve controlar o acesso das funcionalidades                                                                             |                                                                                     |              
-|Responsividade                     |RNF06    |Velocidade de resposta e tempo de atualização de tela                                                                             |                 
-
-
-## Instalação do projeto/ Funcionalidade
-
-1) Clonar reposiório, dando o seguinte comando no terminal de sua maquina: git clone "https://gitlab.com/VitorDan/projeto-integrador-2-sem.-2020.git"
-2) Abrir o terminal dentro da pasta do projeto e digitar "npm install", para instalar os módulos utilizados.
-3) Com o Mysql instalado, criar um banco de dados na porta "3306" com o nome "gantt_howto_node" e implementar as tabelas que estão no aquivo schema.sql
-4) Abrir o terminal no arquivo server.js e digitar "node server.js".
-5) O projeto será executado na porta "1337" no "localhost".
-
-
-3. 3º Sementre
+# KIND OF - 3º Semestre de Banco de Dados FATEC/SJC 2020/2.
 
 ## :page_with_curl: Sobre o projeto <a name="-sobre"/></a>
 
@@ -117,12 +519,22 @@ O objetivo do trabalho é reinventar a forma de aproximação do usuário da pla
 
 > A aplicação precisa agregar valor a um sistema já em andamento. A aproximação do cliente/usuário será realizada atraves da utilização de pontos e utilizar na "loja" virtual ambientalizada dentro do login de cada usuário.
 
+## Contribuições individuias:
 
-4. 4º Semestre 
+1. Front End
+[https://gitlab.com/ferpsalles/kind-of-pi/-/blob/master/bd/login.png]
 
-# Apresentação do Projeto</br>
+[https://gitlab.com/ferpsalles/kind-of-pi/-/blob/master/bd/cad.png]
 
-## Visão do Projeto</br> <a name="-visao"/></a>
+2. Back-end: A aplicação foi desenvolvida com spring boot. 
+Desenvolvimento do model, controller e view.
+
+
+# LOADING - 4º Semestre de Banco de Dados FATEC/SJC 2021/1.
+
+## Apresentação do Projeto</br>
+
+### Visão do Projeto</br> <a name="-visao"/></a>
 O projeto realizado está na área de recrutamento de candidatos, na qual consiste na criação de uma api web simples para criação de vaga e busca do candidato, com foco na otimização da seleção. A estruturação de um eficiente processo de recrutamento facilita a seleção de talentos e competências necessárias para a continuidade e o sucesso das instituições.
 </br></br>
 
@@ -142,39 +554,17 @@ As escolhas das tecnologias foram baseadas em performance e redução de complex
 ## Bibliotecas Utilizadas</br> <a name="-bibliotecas"/></a>
 •    requests </br>
 •    ast</br>
-•    flask_mysqldb</br>
+•    flask_mysqldb</br>]
 •    sqlalchemy</br>
 
-As bibliotecas utilizadas facilitaram na comunicação com o banco de dados, assim como cálculos de localização e aproximação dos candidatos. 
+## Contribuições individuias
+
+### 1. Desenvolvimento front-end e modelagem do banco de dados
+
+[https://github.com/Vitordan5/API-Loading/blob/main/gifs/bancodedados.jpeg]
 
 
-## Instruções de implementação </br> <a name="-instrucao"/></a>
-
- > Crie o banco de dados 
- 1. Utilizar o script SQL que está na pasta "API-Loading/projetointegrador/bd/bd.sql" para ter o modelo do banco.
- 
- > Como rodar a aplicação:
- 1. Alterar as configurações do banco de dados nos arquivos "bd.py" e "app.py"
- 2. Para [configurar e executar o ambiente virtual](https://www.youtube.com/watch?v=hA2l0TgaZhM), a pasta do ambiente virtual criado para este projeto se encontra na pasta "venv" 
- 4. Com o ambiente virtual ativado execute o arquivo "app.py"
- 5. Recomendamos que utilize o software [Postman](https://www.postman.com/downloads/) para testar a rotas disponiveis no projeto.
-
-# Requisitos</br> <a name="-requisitos"/></a>
-## Requisitos Funcionais</br>
-
-· Criar interface de submissão de currículos que recebam, de forma padronizada e adequada ao processo, os candidatos; </br>
-· Busca de candidatos por vagas; </br>
-· Utilizar filtros configuráveis nas buscas de cada vaga; </br>
-
-
-## Requisitos Não Funcionais</br>
-· Arquitetura do BD;</br>
-· Desempenho;</br>
-· Segurança (Safety);</br>
-· Documentação específica;</br>
-
-
-## Rotas Disponíveis <a name="-rotas"/></a>
+### 2. Rotas Disponíveis 
 
 |  ROTAS  CRUD | METHOD | RESPOSTA |
 |--------|----------|----------|
