@@ -522,9 +522,9 @@ O objetivo do trabalho é reinventar a forma de aproximação do usuário da pla
 ## Contribuições individuias:
 
 1. Front End
-[https://gitlab.com/ferpsalles/kind-of-pi/-/blob/master/bd/login.png]
+![Screenshot](https://gitlab.com/ferpsalles/kind-of-pi/-/blob/master/bd/login.png)
 
-[https://gitlab.com/ferpsalles/kind-of-pi/-/blob/master/bd/cad.png]
+![Screenshot](https://gitlab.com/ferpsalles/kind-of-pi/-/blob/master/bd/cad.png)
 
 2. Back-end: A aplicação foi desenvolvida com spring boot. 
 Desenvolvimento do model, controller e view.
@@ -561,7 +561,7 @@ As escolhas das tecnologias foram baseadas em performance e redução de complex
 
 ### 1. Desenvolvimento front-end e modelagem do banco de dados
 
-[https://github.com/Vitordan5/API-Loading/blob/main/gifs/bancodedados.jpeg]
+![Screenshot](https://github.com/Vitordan5/API-Loading/blob/main/gifs/bancodedados.jpeg)
 
 
 ### 2. Rotas Disponíveis 
