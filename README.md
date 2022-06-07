@@ -117,16 +117,31 @@ Esse projeto foi importante para entender e contextulizar na prática o desenvol
 
 ### Em 2021-2
 
+No desenvolvimento do projeto integrador do 5º sementre foi proposto o desenvolvimento de uma plataforma de ensino a distância, na qual visa obter métricas e parâmetros de diferentes perfis de usuários (tutor, gestor, administrador e aluno) dentro da plataforma. 
+
 [GIT - ProjetoAPI](https://github.com/api-fatec-bd/api) | [PARCEIRO - NESS](https://www.ness.com.br/)
 
 #### Tecnologias Utilizadas
 
+- Python: linguagem utilizada para rotinas ETL.
+- MongoDB: Classificado como um programa de banco de dados NoSQL, o MongoDB usa documentos semelhantes a JSON com esquemas. Foi selecionado para o armazenar os dados do chat implementado.
+- BigQuery: Utilizado como armazenamento do dados de  Datawarehouse.
+- Data Flow: Serviço de gerenciado para a execução de pipelines Apache Beam no ecossistema do Google Cloud Platform. Selecionado para realizar os processo de ETL.
+
 #### Contribuições Pessoais
 
+A principal contribuição do projeto foi a modelagem do data warehouse (DW).  Definição de fatos e dimensões para a regra do negócio. A partir das definições estabelecidas e dos dados tratados do OLAP, os dados foram apresentados no dashboard personalisado através do google data studio. O google data studio é uma excelente ferramenta para análises dos dados e contrução dos gráficos.
 
 #### Hard Skills
 
+- Modelagem de Datawarehouse: sei fazer com ajuda
+- Construção de relatório no google data studio: sei fazer com ajuda
+
 #### Soft Skills
+
+- Controle das emoções
+- Atenção para ouvir
+- Criatividade
 
 
 ### 2022 -1
