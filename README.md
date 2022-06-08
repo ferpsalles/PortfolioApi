@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Me chamo Fernanda Ramos de Padua Salles. Atuava como farmacêutica em um clínica de oncologia, onde decidi mudar de área de atuação ao ingressar na Fatec em 2019. Consegui um estágio na aréa atuando como nível 1 de suporte, na qual, fui efetivada na mesma empresa atuando como consultora de suporte.
+Me chamo Fernanda Ramos de Padua Salles. Atuava como farmacêutica em um clínica de oncologia, onde decidi mudar de área de atuação ao ingressar na Fatec em 2019, na qual me encontro em formação. Consegui um estágio na aréa atuando como nível 1 de suporte, na qual, fui efetivada na mesma empresa atuando como consultora de suporte.
 
 ## Meus Projetos
 
@@ -146,25 +146,29 @@ A principal contribuição do projeto foi a modelagem do data warehouse (DW).  D
 
 ### 2022 -1
 
+O desenvolvimento realizado no 6º semestre contempla a atividade implementada na disciplina de laboratório e desenvolvimento de banco de dados, na qual engloba a proposta de aprendizado de máquina ("machine learning"). Um dos exemplos de divisão dos algortimos de machine learning é pelo tipo de aprendizado, seja ele superviosionado ou não. O algoritmo não supervisionado encontra padrões para agrupar elementos semelhantes, não existindo referência para aprendizado. Já no modelo supervisionado aprende com modelos pré-definidos, ou seja, existem rótulos para que tenha uma resposta precisa. 
 
 #### Tecnologias Utilizadas
 
+O foco da atividade foi desenvolvida com python juntamento com o algoritmo KNN (K-nearest neighbors, ou “K-vizinhos mais próximos”). Utilizou a biblioteca matplotlib para análise gráfica das assinaturas das figuras analisadas.
+
 #### Contribuições Pessoais
 
+A metologia do algoritmo se baseia no recebimento de um dado não classificado e mede a distância desse dado com outros já rotulados. O cálculo base da distância é a euclidiana, que mede a distância entre dois pontos em um espaço n-dimencional pelas coordenadas individuais de cada ponto. Utilizou a bubble sort como algoritmo para ordenação das distâncias calculadas.
+Para desenhar a assinatura foram delimitados linhas horizontais e verticais nas imagens padronizadas de 100x100 pixels. Como cada pixel pode ter o valor de zero (preto) até 255 (branco) e ocupa 1 byte de espaço de armazenamento, cada utilizando a escala cinza para representar a escala de bits resultante, ou seja, o pixel com resultado zero é mapeado como preto e no mais alto valor, branco.
 
 #### Hard Skills
 
+Na aplicação, foram padronizadas imagens representativas das formas geométricas de coração e estrela e outras mais aproximadas possíveis  para o processo de aprendizagem. Foi definida uma imagem teste, classificada como indefinida, para validação da atividade e calculo da distância.
+
 #### Soft Skills
+- Atenção para ouvir
+- Criatividade
+
 
 ## Meus Principais Conhecimentos
-Apresente seus principais conhecimentos. Foque nos conhecimentos que possui maior domínio e que deseja desenvolver durante sua carreira.
+
+Acredito que meus principais conhecimentos estejam presentes no desenvolvimento front end. Carreira que pretendo me inserir em oportunidades futuras, pois o conhecimento deve ser contante nessa área de atuação pelo nível elevado de implementação de novas tecnologias.
 
 ## Contatos
-* [GIT](https://www.git.com)
-* [LinkedIn](https://www.linkedin.com)
-
-
-
-
-
-
+ [GIT](https://github.com/ferpsalles) |  [LinkedIn](https://www.linkedin.com/in/fernanda-ramos-de-padua-salles-44329b157/)
