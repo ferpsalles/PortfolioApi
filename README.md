@@ -155,7 +155,7 @@ O foco da atividade foi desenvolvida com python juntamento com o algoritmo KNN (
 #### Contribuições Pessoais
 
 A metologia do algoritmo se baseia no recebimento de um dado não classificado e mede a distância desse dado com outros já rotulados. O cálculo base da distância é a euclidiana, que mede a distância entre dois pontos em um espaço n-dimencional pelas coordenadas individuais de cada ponto. Utilizou a bubble sort como algoritmo para ordenação das distâncias calculadas.
-Para desenhar a assinatura foram delimitados linhas horizontais e verticais nas imagens padronizadas de 100x100 pixels. Como cada pixel pode ter o valor de zero (preto) até 255 (branco) e ocupa 1 byte de espaço de armazenamento, cada utilizando a escala cinza para representar a escala de bits resultante, ou seja, o pixel com resultado zero é mapeado como preto e no mais alto valor, branco.
+Para desenhar a assinatura foram delimitados linhas horizontais e verticais nas imagens padronizadas de 100x100 pixels. Como cada pixel pode conter a saturação de cor de zero (preto) até 255 (branco),  e ocupa 1 byte (8 bites) de espaço de armazenamento, delimita 256 estados, resultando uma escala cinza, ou seja, o pixel com resultado mais próximo de zero é mapeado como preto e no mais alto valor, branco.
 
 #### Hard Skills
 
@@ -168,7 +168,13 @@ Na aplicação, foram padronizadas imagens representativas das formas geométric
 
 ## Meus Principais Conhecimentos
 
-Acredito que meus principais conhecimentos estejam presentes no desenvolvimento front end. Carreira que pretendo me inserir em oportunidades futuras, pois o conhecimento deve ser contante nessa área de atuação pelo nível elevado de implementação de novas tecnologias.
+Acredito que meus principais conhecimentos estejam presentes no desenvolvimento front end. Carreira que pretendo me inserir em oportunidades futuras, pois o conhecimento deve ser constante nessa área de atuação pelo nível elevado de implementação de novas tecnologias.
 
 ## Contatos
  [GIT](https://github.com/ferpsalles) |  [LinkedIn](https://www.linkedin.com/in/fernanda-ramos-de-padua-salles-44329b157/)
+
+
+
+
+
+
